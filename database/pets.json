@@ -5,7 +5,6 @@
       "type": "cat",
       "dob": "2020-12-01",
       "name": "Fluffy",
-      "client-email": "kGytis@gmail.com",
       "archived": false
     },
     {
@@ -13,7 +12,7 @@
       "type": "dog",
       "dob": "2020-12-01",
       "name": "Freya",
-      "client-email": "kGytis@gmail.com",
+      "clientEmail": "kGytis@gmail.com",
       "archived": false
     },
     {
@@ -21,7 +20,15 @@
       "type": "fish",
       "dob": "2020-12-01",
       "name": "Nemo",
-      "client-email": "kGytis@gmail.com",
+      "clientEmail": "kGytis@gmail.com",
+      "archived": true
+    },
+    {
+      "id": "535cdacb-cd6e-41d1-81ac-adc6fd56bc61",
+      "type": "dog",
+      "dob": "2020-12-31",
+      "name": "Lapis",
+      "clientEmail": "ka@ka.com",
       "archived": false
     }
   ],
