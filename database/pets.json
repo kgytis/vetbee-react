@@ -35,26 +35,32 @@
   "logs": [
     {
       "id": 1,
-      "pet_id": 1,
+      "petId": 1,
       "description": "Kazkoks vaistas",
       "status": "Open"
     },
     {
       "id": 2,
-      "pet_id": 1,
+      "petId": 1,
       "description": "Kitas vaistas",
       "status": "Closed"
     },
     {
       "id": 3,
-      "pet_id": 3,
+      "petId": 3,
       "description": "Kazkoks vaistas1",
       "status": "Open"
     },
     {
       "id": 4,
-      "pet_id": 2,
+      "petId": 2,
       "description": "Kazkoks vaistas kazkam",
+      "status": "Open"
+    },
+    {
+      "id": "c8abf79e-3ae5-449e-8d3b-4af29ccc10b8",
+      "petId": 3,
+      "description": "Paskirtasis veiksmas",
       "status": "Open"
     }
   ],
@@ -78,24 +84,31 @@
   "prescriptions": [
     {
       "id": 1,
-      "medication_id": 2,
-      "pet_id": 1,
+      "medicationId": 2,
+      "petId": 1,
       "comment": "Vartoti du kartus per diena. Ryte vakare.",
       "timestamp": "2022-12-31"
     },
     {
       "id": 2,
-      "medication_id": 1,
-      "pet_id": 1,
+      "medicationId": 1,
+      "petId": 1,
       "comment": "Vartoti du kartus per diena. Ryte vakare.",
       "timestamp": "2022-12-31"
     },
     {
       "id": 3,
-      "medication_id": 1,
-      "pet_id": 3,
+      "medicationId": 1,
+      "petId": 3,
       "comment": "Vartoti du kartus per diena. Ryte vakare.",
       "timestamp": "2022-12-31"
+    },
+    {
+      "id": "510222dd-4557-4ab4-a916-c6355bbcbd8f",
+      "medicationId": 3,
+      "petId": 2,
+      "comment": "Vartoti du kartus per diena. Ryte vakare.",
+      "timeStamp": "2022-06-21"
     }
   ]
 }
