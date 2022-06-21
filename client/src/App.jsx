@@ -5,7 +5,7 @@ const App = () => {
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(true);
   useEffect(() => {
-    fetch("/api")
+    fetch("/api/pets")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -18,8 +18,8 @@ const App = () => {
     <div>
       {isPending && <div>Loading...</div>}
       {data &&
-        data.pets.map((pet, i) => {
-          return <h2 key={i}>{pet}</h2>;
+        data.map((pet, i) => {
+          return <h2 key={i}>{pet.name}</h2>;
         })}
     </div>
   );
