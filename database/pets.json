@@ -1,0 +1,89 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "type": "cat",
+      "dob": "2020-12-01",
+      "name": "Fluffy",
+      "client-email": "kGytis@gmail.com",
+      "archived": false
+    },
+    {
+      "id": 2,
+      "type": "dog",
+      "dob": "2020-12-01",
+      "name": "Freya",
+      "client-email": "kGytis@gmail.com",
+      "archived": false
+    },
+    {
+      "id": 3,
+      "type": "fish",
+      "dob": "2020-12-01",
+      "name": "Nemo",
+      "client-email": "kGytis@gmail.com",
+      "archived": false
+    }
+  ],
+  "logs": [
+    {
+      "id": 1,
+      "pet_id": 1,
+      "description": "Kazkoks vaistas",
+      "status": "Open"
+    },
+    {
+      "id": 2,
+      "pet_id": 1,
+      "description": "Kitas vaistas",
+      "status": "Closed"
+    },
+    {
+      "id": 3,
+      "pet_id": 3,
+      "description": "Kazkoks vaistas1",
+      "status": "Open"
+    },
+    {
+      "id": 4,
+      "pet_id": 2,
+      "description": "Kazkoks vaistas kazkam",
+      "status": "Open"
+    }
+  ],
+  "meds": [
+    {
+      "id": 1,
+      "name": "Paracetamolis",
+      "description": "Vaistas nuo temperaturos"
+    },
+    {
+      "id": 2,
+      "name": "Nizoralis",
+      "description": "Vaistas nuo pleiskanu"
+    }
+  ],
+  "prescriptions": [
+    {
+      "id": 1,
+      "medication_id": 2,
+      "pet_id": 1,
+      "comment": "Vartoti du kartus per diena. Ryte vakare.",
+      "timestamp": "2022-12-31"
+    },
+    {
+      "id": 2,
+      "medication_id": 1,
+      "pet_id": 1,
+      "comment": "Vartoti du kartus per diena. Ryte vakare.",
+      "timestamp": "2022-12-31"
+    },
+    {
+      "id": 3,
+      "medication_id": 1,
+      "pet_id": 3,
+      "comment": "Vartoti du kartus per diena. Ryte vakare.",
+      "timestamp": "2022-12-31"
+    }
+  ]
+}
