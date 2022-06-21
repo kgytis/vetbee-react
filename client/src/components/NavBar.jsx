@@ -1,30 +1,25 @@
 import { Link } from "react-router-dom";
 
+import "../assets/styles/Navigation.css";
 //Style imports
-import {
-  StyledLogoImg,
-  StyledNav,
-  StyledLi,
-  StyledUl,
-} from "../assets/styles/NavigationStyles";
 
 const NavBar = ({ ...props }) => {
   const { navigationLinks, logo } = props; // grazina linku objektu array
   console.log(navigationLinks);
   // prirasyti prie Link dar ir element, i kuri jsx faila redirectina
   return (
-    <StyledNav>
+    <nav>
       <Link to="/">
-        <StyledLogoImg src={logo} alt="Logo" />
+        <img src={logo} alt="Logo" />
       </Link>
-      <StyledUl>
+      <ul>
         {navigationLinks.map((link, i) => (
-          <Link to={link.route} key={i} className={"btn btn-info"}>
-            <StyledLi key={i}>{link.title}</StyledLi>
+          <Link to={link.route} key={i}>
+            <li key={i}>{link.title}</li>
           </Link>
         ))}
-      </StyledUl>
-    </StyledNav>
+      </ul>
+    </nav>
   );
 };
 
