@@ -1,27 +1,39 @@
 import "./App.css";
+
+import PetList from "./pages/PetList";
+import HealthRecords from "./pages/HealthRecords";
+import { Routes, Route } from "react-router-dom";
+
 import { useState, useEffect } from "react";
 
 const App = () => {
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(true);
   useEffect(() => {
-    fetch("/api/pets")
+    fetch("api/pets")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
-        setIsPending(false);
         console.log(data);
+        setIsPending(false);
       });
   }, []);
 
   return (
-    <div>
-      {isPending && <div>Loading...</div>}
-      {data &&
-        data.map((pet, i) => {
-          return <h2 key={i}>{pet.name}</h2>;
-        })}
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<PetList />} />
+
+        {!isPending &&
+          data.map((pet, i) => (
+            <Route
+              path={`/health-record/:petId`}
+              element={<HealthRecords />}
+              key={i}
+            />
+          ))}
+      </Routes>
+    </>
   );
 };
 
