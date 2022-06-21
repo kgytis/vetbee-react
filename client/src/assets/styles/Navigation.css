@@ -1,0 +1,33 @@
+img{
+    width: auto;
+    height: 79px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(25, 25, 25, 0.01);
+    border-bottom: 2px solid rgba(28, 28, 28, 0.1);
+    height: 80px;
+}
+
+ul{
+    display: flex;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+    color:rgb(134, 134, 190);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+a:hover{
+    text-decoration: none;
+    color:rgb(100, 100, 143);
+}
