@@ -68,6 +68,11 @@
       "id": 2,
       "name": "Nizoralis",
       "description": "Vaistas nuo pleiskanu"
+    },
+    {
+      "id": "ce4f91db-9114-42cf-a68c-3c67e4a154c1",
+      "name": "Ibumetinas",
+      "description": "Vaistas nuo skausmo"
     }
   ],
   "prescriptions": [
