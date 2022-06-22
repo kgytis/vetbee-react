@@ -56,7 +56,7 @@ const deletePet = async (req, res) => {
         clientEmail: req.body.email,
         archived: true, //keiciama tik sita vieta, kitkas lieka tas pats
       }),
-    }).then(res.redirect("/api/pets"));
+    }).then(res.redirect("/"));
   } catch (err) {
     res.send({ err: err });
   }
