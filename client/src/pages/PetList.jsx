@@ -18,7 +18,7 @@ import { useState, useEffect } from "react";
 const navigationLinks = [
   {
     title: "Pets",
-    route: "/pets",
+    route: "/",
   },
   {
     title: "Medications",
@@ -36,7 +36,6 @@ const PetList = () => {
       .then((data) => {
         setData(data);
         setIsPending(false);
-        console.log(data);
       });
   }, []);
 
