@@ -5,7 +5,6 @@ import "../assets/styles/Navigation.css";
 
 const NavBar = ({ ...props }) => {
   const { navigationLinks, logo } = props; // grazina linku objektu array
-  console.log(navigationLinks);
   // prirasyti prie Link dar ir element, i kuri jsx faila redirectina
   return (
     <nav>

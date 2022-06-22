@@ -106,7 +106,7 @@
     },
     {
       "id": "510222dd-4557-4ab4-a916-c6355bbcbd8f",
-      "medicationId": 3,
+      "medicationId": "ce4f91db-9114-42cf-a68c-3c67e4a154c1",
       "petId": 2,
       "comment": "Vartoti du kartus per diena. Ryte vakare.",
       "timeStamp": "2022-06-21"
