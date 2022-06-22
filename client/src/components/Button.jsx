@@ -1,11 +1,11 @@
 const Button = ({ ...props }) => {
-  const { title, action, classname, id } = props;
+  const { title, action, classname, id, pet } = props;
   return (
     <>
       <button
         className={classname}
         onClick={() => {
-          action(id);
+          action(id, pet);
         }}
       >
         {title}

@@ -15,7 +15,23 @@ const PetCard = ({ ...props }) => {
   };
 
   //Delete function
-
+  const petDeletion = (id, pet) => {
+    fetch(`/api/pets/${id}`, {
+      method: "delete",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id: id,
+        type: pet.type,
+        dob: pet.dob,
+        name: pet.name,
+        email: pet.clientMail,
+        archived: true, //keiciama tik sita vieta, kitkas lieka tas pats
+      }),
+    });
+  };
   return (
     <>
       {pets.map((pet) => {
@@ -33,7 +49,13 @@ const PetCard = ({ ...props }) => {
                 action={getPetsLogs}
                 id={pet.id}
               />
-              <Button title="Delete" classname={"btn btn-outline-primary"} />
+              <Button
+                title="Delete"
+                classname={"btn btn-outline-primary"}
+                action={petDeletion}
+                id={pet.id}
+                pet={pet}
+              />
             </div>
           </div>
         );

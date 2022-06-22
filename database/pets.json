@@ -27,10 +27,9 @@
     {
       "id": "535cdacb-cd6e-41d1-81ac-adc6fd56bc61",
       "type": "dog",
-      "dob": "2020-12-31",
-      "name": "Lapis",
-      "clientEmail": "ka@ka.com",
-      "archived": false
+      "dob": "2020-12-01",
+      "name": "Freya",
+      "archived": true
     }
   ],
   "logs": [
