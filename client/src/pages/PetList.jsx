@@ -10,7 +10,7 @@ import "../assets/styles/Content.css";
 import NavBar from "../components/NavBar";
 import AdditionLineTitle from "../components/AdditionLineTitle";
 import Button from "../components/Button";
-import Card from "../components/Card";
+import PetCard from "../components/PetCard";
 //------------------------------------------------------------
 // Hook imports
 import { useState, useEffect } from "react";
@@ -51,7 +51,7 @@ const PetList = () => {
               <Button title={"Add Pet"} classname={"btn btn-info"} />
             </div>
           </div>
-          <Card data={data} />
+          <PetCard data={data} />
         </>
       )}
     </>

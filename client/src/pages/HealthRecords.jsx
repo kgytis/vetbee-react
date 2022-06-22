@@ -5,9 +5,13 @@ import { useState, useEffect } from "react";
 
 import NavBar from "../components/NavBar";
 import AdditionLineTitle from "../components/AdditionLineTitle";
+import LogCard from "../components/LogCard";
+import PrescriptionCards from "../components/PrescriptionCards";
+import Button from "../components/Button";
 
 const HealthRecords = () => {
-  const params = useParams();
+  const paramsURL = useParams();
+  const params = paramsURL.petId;
 
   const navigationLinks = [
     {
@@ -16,7 +20,7 @@ const HealthRecords = () => {
     },
     {
       title: "Logs",
-      route: `/health-record/${params.petId}`,
+      route: `/health-record/${params}`,
     },
   ];
 
@@ -26,12 +30,12 @@ const HealthRecords = () => {
   const [pet, setPet] = useState(null);
 
   useEffect(() => {
-    fetch(`/api/logs/${params.petId}`)
+    fetch(`/api/logs/${params}`)
       .then((res) => res.json())
       .then((data) => {
         setLogs(data);
       });
-    fetch(`/api/prescriptions/${params.petId}`)
+    fetch(`/api/prescriptions/${params}`)
       .then((res) => res.json())
       .then((data) => {
         setPrescriptions(data);
@@ -41,12 +45,12 @@ const HealthRecords = () => {
       .then((data) => {
         setMeds(data);
       });
-    fetch(`/api/pets/${params.petId}`)
+    fetch(`/api/pets/${params}`)
       .then((res) => res.json())
       .then((data) => {
         setPet(data);
       });
-  }, []);
+  }, [params]);
 
   return (
     <>
@@ -55,25 +59,12 @@ const HealthRecords = () => {
         <>
           <NavBar navigationLinks={navigationLinks} logo={logo} />
           <AdditionLineTitle title={`${pet.name}'s : Health Records`} />
-          {logs.map((log) => {
-            return <h4 key={log.id}>Log description - {log.description}</h4>;
-          })}
-          {prescriptions.map((prescription) => {
-            return (
-              <div key={prescription.id}>
-                <h4>Prescription comment - {prescription.comment}</h4>
-                <div>
-                  {meds.map((med) => {
-                    return (
-                      med.id === prescription.medicationId && (
-                        <h4 key={med.id}>Vaisto pavadinimas - {med.name}</h4>
-                      )
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
+          <div className="additionButtons">
+            <Button title={"ADD PRESCRIPTION"} classname={"btn btn-primary"} />
+            <Button title={"ADD LOG"} classname={"btn btn-outline-primary"} />
+          </div>
+          <LogCard data={logs} />
+          <PrescriptionCards meds={meds} prescriptions={prescriptions} />
         </>
       )}
     </>

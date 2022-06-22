@@ -37,32 +37,32 @@
     {
       "id": 1,
       "petId": 1,
-      "description": "Kazkoks vaistas",
-      "status": "Open"
+      "description": "Yearly vaccine from ticks.",
+      "status": "Tick vaccine"
     },
     {
       "id": 2,
       "petId": 1,
-      "description": "Kitas vaistas",
-      "status": "Closed"
+      "description": "Yearly vaccine from ticks.",
+      "status": "Tick vaccine"
     },
     {
       "id": 3,
       "petId": 3,
-      "description": "Kazkoks vaistas1",
-      "status": "Open"
+      "description": "Yearly vaccine from rabies.",
+      "status": "Rabies shot"
     },
     {
       "id": 4,
       "petId": 2,
       "description": "Kazkoks vaistas kazkam",
-      "status": "Open"
+      "status": "Yearly vaccine from rabies."
     },
     {
       "id": "c8abf79e-3ae5-449e-8d3b-4af29ccc10b8",
       "petId": 3,
-      "description": "Paskirtasis veiksmas",
-      "status": "Open"
+      "description": "Yearly vaccine from rabies.",
+      "status": "Rabies shot"
     }
   ],
   "meds": [
