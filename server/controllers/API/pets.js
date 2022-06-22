@@ -62,4 +62,15 @@ const deletePet = async (req, res) => {
   }
 };
 
-export { allPets, newPet, deletePet };
+const getOnePet = async (req, res) => {
+  try {
+    const response = await fetch(`http://localhost:3000/pets/${req.params.id}`);
+    const data = await response.json();
+
+    res.send(data);
+  } catch (err) {
+    res.send({ err: err });
+  }
+};
+
+export { allPets, newPet, deletePet, getOnePet };
