@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import NavBar from "../components/NavBar";
+import AdditionLineTitle from "../components/AdditionLineTitle";
 
 const HealthRecords = () => {
   const params = useParams();
@@ -19,11 +20,10 @@ const HealthRecords = () => {
     },
   ];
 
-  console.log(params.petId);
   const [logs, setLogs] = useState(null);
   const [prescriptions, setPrescriptions] = useState(null);
   const [meds, setMeds] = useState(null);
-  //   const [isPending, setIsPending] = useState(true);
+  const [pet, setPet] = useState(null);
 
   useEffect(() => {
     fetch(`/api/logs/${params.petId}`)
@@ -41,23 +41,38 @@ const HealthRecords = () => {
       .then((data) => {
         setMeds(data);
       });
+    fetch(`/api/pets/${params.petId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setPet(data);
+      });
   }, []);
-
-  console.log(logs);
-  console.log(prescriptions);
-  console.log(meds);
 
   return (
     <>
-      {!(logs && prescriptions) && <div>Loading...</div>}
-      {logs && prescriptions && (
+      {!(logs && prescriptions && pet && meds) && <div>Loading...</div>}
+      {logs && prescriptions && pet && meds && (
         <>
           <NavBar navigationLinks={navigationLinks} logo={logo} />
+          <AdditionLineTitle title={`${pet.name}'s : Health Records`} />
           {logs.map((log) => {
-            return <div>{log.description}</div>;
+            return <h4 key={log.id}>Log description - {log.description}</h4>;
           })}
-          {prescriptions.map((log) => {
-            return <div>{log.comment}</div>;
+          {prescriptions.map((prescription) => {
+            return (
+              <div key={prescription.id}>
+                <h4>Prescription comment - {prescription.comment}</h4>
+                <div>
+                  {meds.map((med) => {
+                    return (
+                      med.id === prescription.medicationId && (
+                        <h4 key={med.id}>Vaisto pavadinimas - {med.name}</h4>
+                      )
+                    );
+                  })}
+                </div>
+              </div>
+            );
           })}
         </>
       )}
