@@ -2,7 +2,7 @@ import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 
 const PetCard = ({ ...props }) => {
-  const { data: pets } = props;
+  const { data: pets, setreFetch } = props;
   const navigate = useNavigate();
   //View Log functions
 
@@ -30,7 +30,9 @@ const PetCard = ({ ...props }) => {
         email: pet.clientMail,
         archived: true, //keiciama tik sita vieta, kitkas lieka tas pats
       }),
-    });
+    })
+      .then(() => setreFetch(true))
+      .then(() => navigate("/"));
   };
   return (
     <>

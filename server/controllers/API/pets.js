@@ -31,7 +31,7 @@ const newPet = async (req, res) => {
         clientEmail: req.body.email,
         archived: false,
       }),
-    }).then(res.redirect("/api/pets"));
+    }).then(res.redirect("/"));
   } catch (err) {
     res.send({ err: err });
   }
