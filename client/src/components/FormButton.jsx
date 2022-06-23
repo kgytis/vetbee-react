@@ -1,5 +1,5 @@
 const FormButton = ({ ...props }) => {
-  const { title, action, classname, id, pet, type } = props;
+  const { title, classname, type } = props;
   return (
     <>
       <button type={type} className={classname}>
