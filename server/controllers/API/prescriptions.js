@@ -7,13 +7,10 @@ const allPrescriptions = async (req, res) => {
     const presRes = await fetch(`http://localhost:3000/prescriptions`);
     const presData = await presRes.json();
     const petPrescriptions = await presData.filter(
-      (prescription) => prescription.petId === Number(req.params.id)
+      (prescription) => prescription.petId === req.params.id
     );
-    // const medRes = await fetch(`http://localhost:3000/meds`);
-    // const medData = await medRes.json();
 
     res.send(petPrescriptions);
-    // res.send(medData);
   } catch (err) {
     res.send({ err: err });
   }
@@ -33,11 +30,11 @@ const newPrescription = async (req, res) => {
       body: JSON.stringify({
         id: ID,
         medicationId: req.body.medId, // cia geriau front'e tureti selecta, kuris bus padarytas pagal medication fetch'a
-        petId: Number(req.params.id),
+        petId: req.params.id,
         comment: req.body.comment,
         timeStamp: new Date().toLocaleString("LT").slice(0, 10),
       }),
-    }).then(res.redirect(`/api/prescriptions/${req.params.id}`));
+    }).then(res.redirect(`/health-record/${req.params.id}`));
   } catch (err) {
     res.send({ err: err });
   }

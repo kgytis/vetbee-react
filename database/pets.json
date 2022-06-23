@@ -1,7 +1,7 @@
 {
   "pets": [
     {
-      "id": 1,
+      "id": "1",
       "type": "cat",
       "dob": "2020-12-01",
       "name": "Fluffy",
@@ -9,7 +9,7 @@
       "archived": false
     },
     {
-      "id": 2,
+      "id": "2",
       "type": "dog",
       "dob": "2020-12-01",
       "name": "Freya",
@@ -17,132 +17,81 @@
       "archived": false
     },
     {
-      "id": 3,
+      "id": "3",
       "type": "fish",
       "dob": "2020-12-01",
       "name": "Nemo",
       "clientEmail": "kGytis@gmail.com",
-      "archived": true
+      "archived": false
     },
     {
-      "id": "535cdacb-cd6e-41d1-81ac-adc6fd56bc61",
-      "type": "dog",
-      "dob": "2020-12-01",
-      "name": "Freya",
-      "archived": true
-    },
-    {
-      "id": "ebfe0228-6563-48f4-9bdb-f93a6c29de7c",
-      "type": "Dog",
-      "dob": "2000-12-01",
-      "name": "Bandymas",
-      "archived": true
-    },
-    {
-      "id": "6b0fd631-9457-4692-9757-977434a69f2f",
+      "id": "5ba4052d-7cfb-42a5-bf67-28ff73135bdb",
       "type": "Dog",
       "dob": "2022-06-01",
-      "name": "Dog",
+      "name": "Brisius",
       "archived": true
     },
     {
-      "id": "7d27744d-6e2c-458c-9355-e01a03385ac4",
-      "type": "dog",
-      "dob": "2022-05-30",
-      "name": "Gytis",
-      "archived": true
-    },
-    {
-      "id": "5fb3a4f0-4a6d-4a14-ba0e-9d20492a590b",
+      "id": "134eba81-700e-4983-8797-734f13ef8149",
       "type": "Cat",
-      "dob": "2022-06-16",
-      "name": "Gytis",
+      "dob": "2022-06-01",
+      "name": "Bebrius",
       "archived": true
     },
     {
-      "id": "06c62026-0713-4a68-867c-619a7282d76d",
-      "type": "aa",
-      "dob": "2022-06-10",
-      "name": "ff",
+      "id": "04eb19dd-ec62-4f53-b978-3919bd3e05fd",
+      "type": "Cat",
+      "dob": "2022-06-01",
+      "name": "Petas",
       "archived": true
-    },
-    {
-      "id": "64241050-db99-43f3-8b0e-ff9a51e682ed",
-      "type": "asa",
-      "dob": "2022-06-04",
-      "name": "fff",
-      "archived": true
-    },
-    {
-      "id": "70960254-0e41-4a27-a902-e8c064dd6a49",
-      "type": "fff",
-      "dob": "2022-06-10",
-      "name": "sss",
-      "archived": true
-    },
-    {
-      "id": "a3ea1b32-6c94-4315-a943-e881fd5fc403",
-      "type": "aa",
-      "dob": "2022-06-18",
-      "name": "ss",
-      "archived": true
-    },
-    {
-      "id": "7c63e5a3-7392-4506-9589-bf779d7269d2",
-      "type": "ddd",
-      "dob": "2022-06-11",
-      "name": "ddd",
-      "archived": true
-    },
-    {
-      "id": "f8a4e15a-7266-4115-994e-72a4dd5ab3a5",
-      "type": "Dog",
-      "dob": "2022-06-10",
-      "name": "Gytis",
-      "clientEmail": "kaziukon.gytis@gmail.com",
-      "archived": false
     }
   ],
   "logs": [
     {
-      "id": 1,
-      "petId": 1,
+      "id": "1",
+      "petId": "1",
       "description": "Yearly vaccine from ticks.",
       "status": "Tick vaccine"
     },
     {
-      "id": 2,
-      "petId": 1,
+      "id": "2",
+      "petId": "1",
       "description": "Yearly vaccine from ticks.",
       "status": "Tick vaccine"
     },
     {
-      "id": 3,
-      "petId": 3,
+      "id": "3",
+      "petId": "3",
       "description": "Yearly vaccine from rabies.",
       "status": "Rabies shot"
     },
     {
-      "id": 4,
-      "petId": 2,
+      "id": "4",
+      "petId": "2",
       "description": "Kazkoks vaistas kazkam",
       "status": "Yearly vaccine from rabies."
     },
     {
       "id": "c8abf79e-3ae5-449e-8d3b-4af29ccc10b8",
-      "petId": 3,
+      "petId": "3",
       "description": "Yearly vaccine from rabies.",
       "status": "Rabies shot"
+    },
+    {
+      "id": "ee69876a-f4f6-49a7-92f7-1995a3baff8c",
+      "petId": "5ba4052d-7cfb-42a5-bf67-28ff73135bdb",
+      "description": "Sulauzyta koja per blauzda, ikrito begiodamas i duobe.",
+      "status": "Luzus koja"
     }
   ],
   "meds": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Paracetamolis",
       "description": "Vaistas nuo temperaturos"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Nizoralis",
       "description": "Vaistas nuo pleiskanu"
     },
@@ -150,36 +99,82 @@
       "id": "ce4f91db-9114-42cf-a68c-3c67e4a154c1",
       "name": "Ibumetinas",
       "description": "Vaistas nuo skausmo"
+    },
+    {
+      "id": "5",
+      "name": "Paracetamolis",
+      "description": "Vaistas nuo temperaturos"
+    },
+    {
+      "id": "6",
+      "name": "Paracetamolis",
+      "description": "Vaistas nuo temperaturos"
+    },
+    {
+      "id": "7",
+      "name": "Paracetamolis",
+      "description": "Vaistas nuo temperaturos"
+    },
+    {
+      "id": "d401c018-47ae-4cff-874a-43c735615ec8",
+      "name": "Braviko",
+      "description": "Vaistai nuo erkių."
+    },
+    {
+      "id": "ffab8641-7cab-4ae3-9e73-1ec2ab6cd868",
+      "name": "Braviko 5-10 kg",
+      "description": "Vaistai nuo erkių."
     }
   ],
   "prescriptions": [
     {
-      "id": 1,
-      "medicationId": 2,
-      "petId": 1,
+      "id": "1",
+      "medicationId": "2",
+      "petId": "1",
       "comment": "Vartoti du kartus per diena. Ryte vakare.",
       "timestamp": "2022-12-31"
     },
     {
-      "id": 2,
-      "medicationId": 1,
-      "petId": 1,
+      "id": "2",
+      "medicationId": "1",
+      "petId": "1",
       "comment": "Vartoti du kartus per diena. Ryte vakare.",
       "timestamp": "2022-12-31"
     },
     {
-      "id": 3,
-      "medicationId": 1,
-      "petId": 3,
+      "id": "3",
+      "medicationId": "1",
+      "petId": "3",
       "comment": "Vartoti du kartus per diena. Ryte vakare.",
       "timestamp": "2022-12-31"
     },
     {
       "id": "510222dd-4557-4ab4-a916-c6355bbcbd8f",
       "medicationId": "ce4f91db-9114-42cf-a68c-3c67e4a154c1",
-      "petId": 2,
+      "petId": "2",
       "comment": "Vartoti du kartus per diena. Ryte vakare.",
       "timeStamp": "2022-06-21"
+    },
+    {
+      "id": "b286385b-a86c-4e4f-a824-624da776196e",
+      "medicationId": "6",
+      "petId": "3",
+      "comment": "Vartoti du kartus per diena",
+      "timeStamp": "2022-06-22"
+    },
+    {
+      "id": "b6b92de1-ddf8-421d-a203-9fd133eee74f",
+      "medicationId": "ce4f91db-9114-42cf-a68c-3c67e4a154c1",
+      "petId": "5ba4052d-7cfb-42a5-bf67-28ff73135bdb",
+      "comment": "Nuo skausmo. 2x per diena",
+      "timeStamp": "2022-06-22"
+    },
+    {
+      "id": "84d0e44a-608c-4487-80ad-2f9096571c3c",
+      "medicationId": "ffab8641-7cab-4ae3-9e73-1ec2ab6cd868",
+      "petId": "3",
+      "comment": "Vartoti vieną kartą per dieną, ryte/vakare",
+      "timeStamp": "2022-06-23"
     }
   ]
 }
