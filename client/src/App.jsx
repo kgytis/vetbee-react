@@ -1,8 +1,11 @@
 import "./App.css";
 
+import { Routes, Route } from "react-router-dom";
+
 import PetList from "./pages/PetList";
 import HealthRecords from "./pages/HealthRecords";
-import { Routes, Route } from "react-router-dom";
+
+import Medications from "./pages/Medications";
 
 const App = () => {
   return (
@@ -10,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<PetList />} />
         <Route path={`/health-record/:petId`} element={<HealthRecords />} />
+        <Route path={`/meds`} element={<Medications />} />
       </Routes>
     </>
   );
