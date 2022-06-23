@@ -21,8 +21,7 @@
       "type": "fish",
       "dob": "2020-12-01",
       "name": "Nemo",
-      "clientEmail": "kGytis@gmail.com",
-      "archived": false
+      "archived": true
     },
     {
       "id": "5ba4052d-7cfb-42a5-bf67-28ff73135bdb",
@@ -43,6 +42,13 @@
       "type": "Cat",
       "dob": "2022-06-01",
       "name": "Petas",
+      "archived": true
+    },
+    {
+      "id": "3cdc9351-05b5-4efd-a1c8-25c1fbfb3645",
+      "type": "aaa",
+      "dob": "2022-06-01",
+      "name": "sss",
       "archived": true
     }
   ],
@@ -175,6 +181,12 @@
       "petId": "3",
       "comment": "Vartoti vieną kartą per dieną, ryte/vakare",
       "timeStamp": "2022-06-23"
+    }
+  ],
+  "mode": [
+    {
+      "id": "onlyDarkModeID",
+      "darkMode": false
     }
   ]
 }
