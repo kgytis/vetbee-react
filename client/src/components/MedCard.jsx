@@ -1,5 +1,5 @@
 const MedCard = ({ ...props }) => {
-  const { data: meds, setreFetch, reFetch } = props;
+  const { data: meds } = props;
   return (
     <>
       {meds.map((med) => {
