@@ -89,78 +89,6 @@ const PetList = () => {
           <div className="additionLine">
             <AdditionLineTitle title={"Pet List"} />
             <div className="additionButtons">
-              <Dialog open={open} onClose={handleClose}>
-                <DialogTitle>Subscribe</DialogTitle>
-                <DialogContent>
-                  <DialogContentText>
-                    To subscribe to this website, please enter your email
-                    address here. We will send updates occasionally.
-                  </DialogContentText>
-                  <form
-                    action="/api/pets"
-                    method="POST"
-                    onSubmit={() => submitForm}
-                  >
-                    <TextField
-                      autoFocus
-                      required
-                      margin="dense"
-                      id="name"
-                      label="Pet Name"
-                      type="text"
-                      fullWidth
-                      variant="standard"
-                      placeholder="Name"
-                      name="name"
-                    />
-                    <TextField
-                      required
-                      margin="dense"
-                      id="type"
-                      label="Pet Type"
-                      type="text"
-                      name="type"
-                      fullWidth
-                      variant="standard"
-                      placeholder="Dog, cat, etc..."
-                    />
-                    <TextField
-                      required
-                      margin="dense"
-                      id="dob"
-                      name="dob"
-                      label="Pet's date of birthday"
-                      type="date"
-                      fullWidth
-                      variant="standard"
-                      InputLabelProps={{ shrink: true }}
-                    />
-                    <TextField
-                      required
-                      margin="dense"
-                      id="email"
-                      name="email"
-                      label="Owners email address"
-                      type="email"
-                      fullWidth
-                      variant="standard"
-                    />
-                    <DialogActions>
-                      <FormButton
-                        title={"Submit"}
-                        classname={"btn btn-primary"}
-                        type="submit"
-                      />
-                      <Button
-                        title={"Close"}
-                        classname={"btn btn-outline-primary"}
-                        action={handleClose}
-                      />
-                    </DialogActions>
-                  </form>
-                </DialogContent>
-              </Dialog>
-
               <Button
                 title={"Add Pet"}
                 classname={"btn btn-info"}
@@ -171,6 +99,72 @@ const PetList = () => {
           <PetCard data={data} reFetch={reFetch} setreFetch={setreFetch} />
         </>
       )}
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>New Pet</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Please fillout ALL fields to insert to the system new pet data.
+          </DialogContentText>
+          <form action="/api/pets" method="POST" onSubmit={() => submitForm}>
+            <TextField
+              autoFocus
+              required
+              margin="dense"
+              id="name"
+              label="Pet Name"
+              type="text"
+              fullWidth
+              variant="standard"
+              placeholder="Name"
+              name="name"
+            />
+            <TextField
+              required
+              margin="dense"
+              id="type"
+              label="Pet Type"
+              type="text"
+              name="type"
+              fullWidth
+              variant="standard"
+              placeholder="Dog, cat, etc..."
+            />
+            <TextField
+              required
+              margin="dense"
+              id="dob"
+              name="dob"
+              label="Pet's date of birthday"
+              type="date"
+              fullWidth
+              variant="standard"
+              InputLabelProps={{ shrink: true }}
+            />
+            <TextField
+              required
+              margin="dense"
+              id="email"
+              name="email"
+              label="Owners email address"
+              type="email"
+              fullWidth
+              variant="standard"
+            />
+            <DialogActions>
+              <FormButton
+                title={"Submit"}
+                classname={"btn btn-primary"}
+                type="submit"
+              />
+              <Button
+                title={"Close"}
+                classname={"btn btn-outline-primary"}
+                action={handleClose}
+              />
+            </DialogActions>
+          </form>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
