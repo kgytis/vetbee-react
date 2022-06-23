@@ -26,7 +26,7 @@ const newMed = async (req, res) => {
         name: req.body.medName,
         description: req.body.medDescription,
       }),
-    }).then(res.redirect("/api/meds"));
+    }).then(res.redirect("/meds"));
   } catch (err) {
     res.send({ err: err });
   }
